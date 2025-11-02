@@ -73,7 +73,8 @@ const nextConfig: NextConfig = {
             pathname: "/uploads/**",
           } as const;
         } catch {
-          return { protocol: "https", hostname: "delicias1-production.up.railway.app", pathname: "/uploads/**" } as const;
+          // Fallback to localhost for development
+          return { protocol: "http", hostname: "localhost", port: "5001", pathname: "/uploads/**" } as const;
         }
       })() as any,
     ],
