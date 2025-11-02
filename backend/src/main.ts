@@ -38,6 +38,6 @@ async function bootstrap() {
     res.type('text/yaml').send(yamlDoc);
   });
 
-  await app.listen(process.env.PORT ?? 5001);
+  await app.listen(process.env.PORT ?? 5001, '0.0.0.0');
 }
 bootstrap();
