@@ -43,6 +43,7 @@ export default function LoginPage() {
             required
             className="w-full border rounded px-3 py-2"
             placeholder="tu@email.com"
+            autoComplete="email"
           />
         </div>
         <div>
@@ -54,6 +55,7 @@ export default function LoginPage() {
             required
             className="w-full border rounded px-3 py-2"
             placeholder="••••••••"
+            autoComplete="current-password"
           />
         </div>
         <button

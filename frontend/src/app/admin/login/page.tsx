@@ -46,6 +46,7 @@ export default function AdminLoginPage() {
             className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 shadow-sm focus:border-slate-900 focus:ring-2 focus:ring-slate-300"
             placeholder="admin@ejemplo.com"
             required
+            autoComplete="email"
           />
         </div>
         <div>
@@ -58,6 +59,7 @@ export default function AdminLoginPage() {
             className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2 shadow-sm focus:border-slate-900 focus:ring-2 focus:ring-slate-300"
             placeholder="••••••••"
             required
+            autoComplete="current-password"
           />
         </div>
 

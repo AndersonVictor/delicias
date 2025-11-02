@@ -46,6 +46,7 @@ export default function RegisterPage() {
             onChange={(e) => setNombre(e.target.value)}
             required
             className="w-full border rounded px-3 py-2"
+            autoComplete="given-name"
           />
         </div>
         <div>
@@ -56,6 +57,7 @@ export default function RegisterPage() {
             onChange={(e) => setApellido(e.target.value)}
             required
             className="w-full border rounded px-3 py-2"
+            autoComplete="family-name"
           />
         </div>
         <div className="md:col-span-2">
@@ -66,6 +68,7 @@ export default function RegisterPage() {
             onChange={(e) => setEmail(e.target.value)}
             required
             className="w-full border rounded px-3 py-2"
+            autoComplete="email"
           />
         </div>
         <div className="md:col-span-2">
@@ -76,6 +79,7 @@ export default function RegisterPage() {
             onChange={(e) => setPassword(e.target.value)}
             required
             className="w-full border rounded px-3 py-2"
+            autoComplete="new-password"
           />
         </div>
         <div>
@@ -85,6 +89,7 @@ export default function RegisterPage() {
             value={telefono}
             onChange={(e) => setTelefono(e.target.value)}
             className="w-full border rounded px-3 py-2"
+            autoComplete="tel"
           />
         </div>
         <div>
@@ -94,6 +99,7 @@ export default function RegisterPage() {
             value={direccion}
             onChange={(e) => setDireccion(e.target.value)}
             className="w-full border rounded px-3 py-2"
+            autoComplete="address-line1"
           />
         </div>
 

@@ -283,9 +283,9 @@ export default function CheckoutPage() {
                 <div className="text-sm">Total</div>
                 <div className="font-semibold">{currency(getCartTotal())}</div>
               </div>
-+             <div className="px-3 pb-3 text-xs text-black/60">
-+               {comprobanteTipo === "boleta" ? "Boleta: Sin IGV" : "Factura: IGV no aplicado (temporal)"}
-+             </div>
+              <div className="px-3 pb-3 text-xs text-black/60">
+                {comprobanteTipo === "boleta" ? "Boleta: Sin IGV" : "Factura: IGV no aplicado (temporal)"}
+              </div>
             </div>
 
             {/* Formulario de checkout */}
@@ -298,6 +298,7 @@ export default function CheckoutPage() {
                     value={fechaEntrega}
                     onChange={(e) => setFechaEntrega(e.target.value)}
                     className="mt-1 w-full border rounded px-3 py-2"
+                      autoComplete="off"
                   />
                 </div>
                 <div className="md:col-span-2">
@@ -308,6 +309,7 @@ export default function CheckoutPage() {
                     onChange={(e) => setDireccionEntrega(e.target.value)}
                     className="mt-1 w-full border rounded px-3 py-2"
                     placeholder="Av. Siempre Viva 742"
+                      autoComplete="address-line1"
                   />
                 </div>
               </div>
@@ -320,6 +322,7 @@ export default function CheckoutPage() {
                     value={telefonoContacto}
                     onChange={(e) => setTelefonoContacto(e.target.value)}
                     className="mt-1 w-full border rounded px-3 py-2"
+                      autoComplete="tel"
                   />
                 </div>
                 <div>
@@ -330,6 +333,7 @@ export default function CheckoutPage() {
                     onChange={(e) => setNotas(e.target.value)}
                     className="mt-1 w-full border rounded px-3 py-2"
                     placeholder="Instrucciones adicionales"
+                      autoComplete="off"
                   />
                 </div>
               </div>
@@ -358,6 +362,7 @@ export default function CheckoutPage() {
                       onChange={(e) => setCardNumber(e.target.value)}
                       className="mt-1 w-full border rounded px-3 py-2"
                       placeholder="1234 5678 9012 3456"
+                          autoComplete="cc-number"
                     />
                   </div>
                   <div>
@@ -367,6 +372,7 @@ export default function CheckoutPage() {
                       value={cardName}
                       onChange={(e) => setCardName(e.target.value)}
                       className="mt-1 w-full border rounded px-3 py-2"
+                          autoComplete="cc-name"
                     />
                   </div>
                   <div>
@@ -377,6 +383,7 @@ export default function CheckoutPage() {
                       onChange={(e) => setCardExp(e.target.value)}
                       className="mt-1 w-full border rounded px-3 py-2"
                       placeholder="MM/YY"
+                          autoComplete="cc-exp"
                     />
                   </div>
                   <div>
@@ -387,6 +394,7 @@ export default function CheckoutPage() {
                       onChange={(e) => setCardCvv(e.target.value)}
                       className="mt-1 w-full border rounded px-3 py-2"
                       placeholder="123"
+                          autoComplete="cc-csc"
                     />
                   </div>
                 </div>
@@ -402,7 +410,7 @@ export default function CheckoutPage() {
                       <option value="boleta">Boleta</option>
                       <option value="factura">Factura</option>
                     </select>
-+                   <p className="mt-1 text-xs text-black/60">Para boleta no se aplica IGV.</p>
+                    <p className="mt-1 text-xs text-black/60">Para boleta no se aplica IGV.</p>
                   </div>
                   <div>
                     <label className="block text-sm font-medium">Documento</label>
@@ -420,6 +428,7 @@ export default function CheckoutPage() {
                         onChange={(e) => setNumeroDocumento(e.target.value)}
                         className="w-full border rounded px-3 py-2"
                         placeholder="12345678 (DNI) o 20123456789 (RUC)"
+                        autoComplete="off"
                       />
                       <button
                         type="button"
