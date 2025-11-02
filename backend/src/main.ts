@@ -38,6 +38,9 @@ async function bootstrap() {
     res.type('text/yaml').send(yamlDoc);
   });
 
-  await app.listen(process.env.PORT ?? 5001, '0.0.0.0');
+  const port = process.env.PORT || 5001;
+  await app.listen(port, '0.0.0.0');
+  console.log(`🚀 Backend running on port ${port}`);
+  console.log(`📚 Swagger docs: http://localhost:${port}/api/docs`);
 }
 bootstrap();
